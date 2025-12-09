@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   /* generic styles */
-  columns: #3a3a3a;
+  color: #3a3a3a;
   font-family: "Lato", sans-serif;
 }
 h1,
@@ -174,7 +174,47 @@ hr {
   overflow: hidden;
 }
 main {
+  display: flex;
+  flex: 1 0 auto;
   margin-top: 67px;
+}
+
+#signup {
+  background: url("/assets/images/signup-image.webp") no-repeat 75% / cover;
+  padding: 20px 10% 0 10%;
+  flex-grow: 1;
+}
+#signup-form {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 30px;
+}
+#signup-form > h2 {
+  color: #fafafa;
+  margin-bottom: 20px;
+}
+.text-input {
+  background: transparent;
+  color: #fafafa;
+  width: 100%;
+  height: 25px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #fafafa;
+  border-radius: 2px;
+  padding: 0 5px;
+}
+.radio-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.join-button {
+  background-color: #454b1b;
+  color: #fafafa;
+  padding: 15px 32px 15px 32px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 100%;
 }
 /* media queries */
 @media screen and (min-width: 576px) {
@@ -228,6 +268,15 @@ main {
   }
   #photos {
     column-count: 3;
+  }
+  #signup {
+    position: relative;
+  }
+  #signup-form {
+    position: absolute;
+    top: 150px;
+    left: 10%;
+    max-width: 400px;
   }
 }
 @media screen and (min-width: 992px) {
